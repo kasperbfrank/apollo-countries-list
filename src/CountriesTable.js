@@ -33,17 +33,15 @@ export const CountriesTable = ({countries, loading}) => {
   };
 
   return (
-    <>
-      <EuiInMemoryTable
-        items={countries}
-        columns={columns}
-        search={search}
-        loading={loading}
-        tableLayout="auto"
-        pagination={true}
-        sorting={true}
-      />
-    </>
+    <EuiInMemoryTable
+      items={countries}
+      columns={columns}
+      search={search}
+      loading={loading}
+      pagination={true}
+      sorting={true}
+    />
   );
 }
+
 

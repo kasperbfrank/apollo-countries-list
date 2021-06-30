@@ -16,7 +16,7 @@ function App() {
         Countries List
       </header>
 
-      <CountriesTable countries={countries} loading={loading} />
+      <CountriesTable countries={countries} loading={loading}/>
     </main>
   );
 }
