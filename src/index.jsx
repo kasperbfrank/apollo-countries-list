@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {ApolloClient, ApolloProvider, InMemoryCache} from "@apollo/client";
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
 const client = new ApolloClient({
   uri: 'https://countries.trevorblades.com/',
-  cache: new InMemoryCache()
+  cache: new InMemoryCache(),
 });
 
 ReactDOM.render(

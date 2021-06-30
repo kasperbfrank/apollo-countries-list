@@ -1,7 +1,7 @@
-import {EuiInMemoryTable} from "@elastic/eui";
-import React from "react";
+import { EuiInMemoryTable } from '@elastic/eui';
+import React from 'react';
 
-export const CountriesTable = ({countries, loading}) => {
+export const CountriesTable = ({ countries, loading }) => {
   const columns = [
     {
       field: 'name',
@@ -11,19 +11,19 @@ export const CountriesTable = ({countries, loading}) => {
     {
       field: 'emoji',
       name: 'Country flag',
-      truncateText: true
+      truncateText: true,
     },
     {
       field: 'continent',
       name: 'Continent',
-      render: ({name}) => name,
+      render: ({ name }) => name,
       sortable: true,
     },
     {
       field: 'code',
       name: 'ISO code',
-      sortable: true
-    }
+      sortable: true,
+    },
   ];
 
   const search = {
@@ -42,6 +42,4 @@ export const CountriesTable = ({countries, loading}) => {
       sorting={true}
     />
   );
-}
-
-
+};
