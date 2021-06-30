@@ -1,7 +1,7 @@
 import './App.css';
-import {CountriesTable} from "./CountriesTable";
+import {CountriesTable} from "./components/CountriesTable";
 import {useQuery} from "@apollo/client";
-import {COUNTRY_QUERY} from "./queries";
+import {COUNTRY_QUERY} from "./constants";
 import {EuiPage, EuiPageBody, EuiPageContent, EuiPageHeader} from "@elastic/eui";
 
 function App() {
