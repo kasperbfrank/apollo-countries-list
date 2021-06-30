@@ -1,24 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import {CountriesTable} from "./CountriesTable";
+import {useQuery} from "@apollo/client";
+import {COUNTRY_QUERY} from "./queries";
 
 function App() {
+  const {loading, error, data} = useQuery(COUNTRY_QUERY);
+
+  console.log({loading, data, error});
+
+  const countries = data?.countries ?? [];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <main>
+      <header>
+        Countries List
       </header>
-    </div>
+
+      <CountriesTable countries={countries} loading={loading} />
+    </main>
   );
 }
 
